@@ -3,14 +3,14 @@
 import Image from "next/image";
 
 export default async function StarGazers() {
-  const res = await fetch(
-    "http://worldtimeapi.org/api/timezone/Europe/London"
-  );
+  const res = await fetch("https://api.github.com/repos/vercel/next.js");
   const data = await res.json();
+
+  console.log(res);
 
   return (
     <div>
-      <p>{data.stargazers_count} People gazing at Next.js</p>
+      <p>{data.stargazers_count} people gazing at Next.js</p>
     </div>
   );
 }
